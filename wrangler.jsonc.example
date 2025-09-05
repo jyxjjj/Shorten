@@ -9,6 +9,7 @@
     "observability": {
         "enabled": false,
     },
+    "workers_dev": true,
     "vars": {},
     "assets": {
         "directory": "./public",
