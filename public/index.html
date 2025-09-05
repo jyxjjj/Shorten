@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>URL Shorten</title>
+    <style>
+        * {
+            font-family: "JetBrains Mono", "Noto Sans SC", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", system-ui, -apple-system, emoji, monospace;
+            font-feature-settings: "liga" off, "calt" off !important;
+            -webkit-font-smoothing: antialiased !important;
+            text-rendering: optimizeLegibility !important;
+        }
+
+        html,
+        body,
+        root {
+            margin: 0 auto 0 auto;
+            min-width: 100dvw;
+            max-width: 100dvw;
+            width: 100dvw;
+            height: 100dvh;
+            min-height: 100dvh;
+            max-height: 100dvh;
+
+            .no-overflow {
+                overflow: hidden;
+            }
+        }
+
+        root {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000;
+            color: #fff;
+            gap: 1rem;
+        }
+
+        input[type="url"] {
+            width: 300px;
+            padding: 0.6rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            background-color: #222;
+            color: #fff;
+        }
+
+        input[type="url"]::placeholder {
+            color: #888;
+        }
+
+        button {
+            width: 150px;
+            padding: 0.6rem 1rem;
+            background-color: #1a73e8;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #155ab6;
+        }
+
+        #result,
+        #error {
+            width: 300px;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            word-break: break-all;
+        }
+
+        #result {
+            display: none;
+            background-color: #0a7d3c;
+            color: #fff;
+        }
+
+        #error {
+            display: none;
+            background-color: #b71c1c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <root>
+        <input id="long-url" type="url" placeholder="Enter your long URL here" autofocus>
+        <button id="shorten-btn">Short</button>
+        <div id="result"></div>
+        <div id="error"></div>
+    </root>
+    <script src="./index.js"></script>
+</body>
+</html>

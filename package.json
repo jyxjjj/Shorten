@@ -1,0 +1,17 @@
+{
+    "name": "shorten",
+    "version": "0.1.0",
+    "description": "URL Shortener on Cloudflare Workers",
+    "homepage": "https://github.com/jyxjjj/Shorten#readme",
+    "license": "AGPL-3.0-only",
+    "author": "DESMG <admin@desmg.com> (https://www.desmg.com/)",
+    "type": "commonjs",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "wrangler dev",
+        "deploy": "wrangler publish"
+    },
+    "dependencies": {
+        "wrangler": "^4.34.0"
+    }
+}

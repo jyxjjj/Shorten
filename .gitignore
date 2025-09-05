@@ -1,5 +1,11 @@
 .DS_Store
 Thumbs.db
+
 /.idea
+/.vscode
+
 /node_modules
-*.log
+/.wrangler
+
+wrangler.jsonc
+git
